@@ -4,7 +4,7 @@ package com.example.demo.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Producto")
+@Table(name = "producto")
 public class ProductoModel {
 
     @Id
