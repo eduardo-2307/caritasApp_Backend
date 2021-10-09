@@ -31,9 +31,9 @@ public class DonacionController {
         return this.donacionService.guardarDonacion(donacion);
     }
 
-    @GetMapping( path = "/{id}")
-    public Optional<DonacionModel> obtenerPorFolio(@PathVariable("id") Long folio) {
-        return this.donacionService.obtenerPorFolio(folio);
+    @GetMapping( path = "/{folio_donacion}")
+    public Optional<DonacionModel> obtenerPorFolio(@PathVariable("folio_donacion") Long folio_donacion) {
+        return this.donacionService.obtenerPorFolio(folio_donacion);
     }
 
     /*@GetMapping( path = "/query")
