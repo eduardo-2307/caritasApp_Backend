@@ -41,13 +41,13 @@ public class DonacionController {
         return this.donacionService.obtenerPorUPC(UPC);
     }*/
 
-    @DeleteMapping( path = "/{id}")
-    public String eliminarPorId(@PathVariable("id") Long id) {
-        boolean ok = this.donacionService.eliminarDonacion(id);
+    @DeleteMapping( path = "/{folio_donacion}")
+    public String eliminarPorId(@PathVariable("folio_donacion") Long folio_donacion) {
+        boolean ok = this.donacionService.eliminarDonacion(folio_donacion);
         if (ok){
-            return "Se eliminó la donación con folio " + id;
+            return "Se eliminó la donación con folio " + folio_donacion;
         }else{
-            return "No se pudo eliminar la donación con folio " + id;
+            return "No se pudo eliminar la donación con folio " + folio_donacion;
         }
     }
     

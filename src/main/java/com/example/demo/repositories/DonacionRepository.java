@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface DonacionRepository extends CrudRepository <DonacionModel, Long> {
 
-    public abstract ArrayList<DonacionModel> findByFolioDonacion(Long folio_donacion);
+    public abstract ArrayList<DonacionModel> findByFolio_Donacion(Long folio_donacion);
     
 } 
 
