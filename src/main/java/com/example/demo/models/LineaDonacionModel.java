@@ -13,7 +13,7 @@ public class LineaDonacionModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
 
-    private Long consecutivo;
+    private Long id;
     private String folio_donacion;
     private String id_articulo;
     private float cantidad;
@@ -21,12 +21,12 @@ public class LineaDonacionModel {
     private float costo_neto;
 
 
-    public void getConsecutivo(Long consecutivo){
-        this.consecutivo = consecutivo;
+    public void getConsecutivo(Long id){
+        this.id = id;
     }
 
     public Long setConsecutivo(){
-        return consecutivo;
+        return id;
     }
 
     public void getFolio_Donacion(String folio_donacion){

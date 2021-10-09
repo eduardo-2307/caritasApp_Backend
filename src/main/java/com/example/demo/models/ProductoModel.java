@@ -1,7 +1,11 @@
-
 package com.example.demo.models;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "producto")
@@ -22,12 +26,12 @@ public class ProductoModel {
     }
 
     public ProductoModel(Long id, int linea, String UPC, String UOM, String descripcion, int img) {
+       
         this.id = id;
         this.UPC = UPC;
         this.UOM = UOM;
         this.descripcion = descripcion;
         this.img = img;
-
 
     }
 

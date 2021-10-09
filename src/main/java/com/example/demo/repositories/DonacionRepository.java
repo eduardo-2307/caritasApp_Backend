@@ -1,16 +1,16 @@
-// package com.example.demo.repositories;
+package com.example.demo.repositories;
 
-// //import java.util.ArrayList;
+import java.util.ArrayList;
 
-// import com.example.demo.models.DonacionModel;
+import com.example.demo.models.DonacionModel;
 
-// import org.springframework.data.repository.CrudRepository;
-// import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-// @Repository
-// public interface DonacionRepository extends CrudRepository <DonacionModel, Long> {
+@Repository
+public interface DonacionRepository extends CrudRepository <DonacionModel, Long> {
 
-//     //public abstract ArrayList<DonacionModel> findByID(Long id);
+    public abstract ArrayList<DonacionModel> findByStatus(String status);
     
-// } 
+} 
 
