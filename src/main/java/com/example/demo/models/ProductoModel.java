@@ -12,7 +12,6 @@ public class ProductoModel {
     @Column(unique = true, nullable = false)
     
     private Long id;
-    private int linea;
     private String UPC;
     private String UOM;
     private String descripcion;
@@ -24,21 +23,12 @@ public class ProductoModel {
 
     public ProductoModel(Long id, int linea, String UPC, String UOM, String descripcion, int img) {
         this.id = id;
-        this.linea = linea;
         this.UPC = UPC;
         this.UOM = UOM;
         this.descripcion = descripcion;
         this.img = img;
 
 
-    }
-
-    public void getLinea(int linea){
-        this.linea = linea;
-    }
-
-    public int setLinea(){
-        return linea;
     }
 
     public Long getId() {
