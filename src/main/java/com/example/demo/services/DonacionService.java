@@ -22,17 +22,17 @@ public class DonacionService {
         return donacionRepository.save(donacion);
     }
 
-    public Optional<DonacionModel> obtenerPorFolio(Long folio_donacion) {
-        return donacionRepository.findById(folio_donacion);
+    public Optional<DonacionModel> obtenerPorFolio(Long id) {
+        return donacionRepository.findById(id);
     }
 
     // public ArrayList<DonacionModel> obtenerPorUPC(String UPC) {
     //     return donacionRepository.findByUPC(UPC);
     // }
 
-    public boolean eliminarDonacion(Long folio_donacion) {
+    public boolean eliminarDonacion(Long id) {
         try{
-            donacionRepository.deleteById(folio_donacion);
+            donacionRepository.deleteById(id);
             return true;
         }catch(Exception err){
             return false;

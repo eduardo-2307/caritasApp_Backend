@@ -31,9 +31,9 @@ public class DonacionController {
         return this.donacionService.guardarDonacion(donacion);
     }
 
-    @GetMapping( path = "/{folio_donacion}")
-    public Optional<DonacionModel> obtenerPorFolio(@PathVariable("folio_donacion") Long folio_donacion) {
-        return this.donacionService.obtenerPorFolio(folio_donacion);
+    @GetMapping( path = "/{id}")
+    public Optional<DonacionModel> obtenerPorFolio(@PathVariable("id") Long id) {
+        return this.donacionService.obtenerPorFolio(id);
     }
 
     /*@GetMapping( path = "/query")
@@ -41,13 +41,13 @@ public class DonacionController {
         return this.donacionService.obtenerPorUPC(UPC);
     }*/
 
-    @DeleteMapping( path = "/{folio_donacion}")
-    public String eliminarPorId(@PathVariable("folio_donacion") Long folio_donacion) {
-        boolean ok = this.donacionService.eliminarDonacion(folio_donacion);
+    @DeleteMapping( path = "/{id}")
+    public String eliminarPorId(@PathVariable("id") Long id) {
+        boolean ok = this.donacionService.eliminarDonacion(id);
         if (ok){
-            return "Se eliminó la donación con folio " + folio_donacion;
+            return "Se eliminó la donación con folio " + id;
         }else{
-            return "No se pudo eliminar la donación con folio " + folio_donacion;
+            return "No se pudo eliminar la donación con folio " + id;
         }
     }
     

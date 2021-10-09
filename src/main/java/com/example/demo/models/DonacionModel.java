@@ -14,19 +14,19 @@ public class DonacionModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
 
-    private Long folio_donacion;
+    private Long id;
     private DateFormat fecha;
     private String id_donador;
     private String status;
     private String recolector;
 
 
-    public void getFolio_Donacion(Long folio_donacion){
-        this.folio_donacion = folio_donacion;
+    public void getFolio_Donacion(Long id){
+        this.id = id;
     }
 
     public Long setFolio_Donacion(){
-        return folio_donacion;
+        return id;
     }
 
     public void getFecha(DateFormat fecha){
