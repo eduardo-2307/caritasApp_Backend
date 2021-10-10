@@ -16,15 +16,15 @@ public class LineaDonacionModel {
     private Long id;
     private String folio_donacion;
     private String id_articulo;
-    private float cantidad;
-    private float costo_unitario;
-    private float costo_neto;
+    private String cantidad;
+    private String costo_unitario;
+    private String costo_neto;
 
     public LineaDonacionModel() {
 
     }
 
-    public LineaDonacionModel(Long id, String folio_donacion, String id_articulo, float cantidad, float costo_unitario, float costo_neto) {
+    public LineaDonacionModel(Long id, String folio_donacion, String id_articulo, String cantidad, String costo_unitario, String costo_neto) {
        
         this.id = id;
         this.folio_donacion = folio_donacion;
@@ -60,27 +60,27 @@ public class LineaDonacionModel {
         this.id_articulo = id_articulo;
     }
 
-    public float getCantidad() {
+    public String getCantidad() {
         return cantidad;
     }
 
-    public void setCantidad(float cantidad) {
+    public void setCantidad(String cantidad) {
         this.cantidad = cantidad;
     }
 
-    public float getCosto_Unitario() {
+    public String getCosto_Unitario() {
         return costo_unitario;
     }
 
-    public void setCosto_Unitario(float costo_unitario) {
+    public void setCosto_Unitario(String costo_unitario) {
         this.costo_unitario = costo_unitario;
     }
 
-    public float getCosto_Neto() {
+    public String getCosto_Neto() {
         return costo_neto;
     }
 
-    public void setCosto_Neto(float costo_neto) {
+    public void setCosto_Neto(String costo_neto) {
         this.costo_neto = costo_neto;
     }
 }
