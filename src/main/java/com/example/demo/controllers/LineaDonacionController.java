@@ -38,8 +38,8 @@ public class LineaDonacionController {
     }
 
     @GetMapping( path = "/query")
-    public ArrayList<LineaDonacionModel> obtenerLineaDonacionPorId_articulo(@RequestParam("id_arcticulo") String status) {
-        return this.lineaDonacionService.obtenerLineaDonacionPorId_articulo(status);
+    public ArrayList<LineaDonacionModel> obtenerLineaDonacionPorId_articulo(@RequestParam("id_articulo") String id_articulo) {
+        return this.lineaDonacionService.obtenerLineaDonacionPorId_articulo(id_articulo);
     }
 
     @DeleteMapping( path = "/{id}")
