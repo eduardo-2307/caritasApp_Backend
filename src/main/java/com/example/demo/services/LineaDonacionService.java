@@ -27,9 +27,9 @@ public class LineaDonacionService {
         return lineadonacionRepository.findById(id);
     }
 
-    public ArrayList<LineaDonacionModel> obtenerLineaDonacionPorId_articulo(String id_articulo) {
-        return lineadonacionRepository.findById_articulo(id_articulo);
-    }
+    // public ArrayList<LineaDonacionModel> obtenerLineaDonacionPorId_articulo(String id_articulo) {
+    //     return lineadonacionRepository.findById_articulo(id_articulo);
+    // }
 
     public boolean eliminarLineaDonacion(Long id) {
         try{

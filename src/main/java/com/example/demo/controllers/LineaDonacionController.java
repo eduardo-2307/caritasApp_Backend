@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+//import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -37,10 +37,10 @@ public class LineaDonacionController {
         return this.lineaDonacionService.obtenerPorId(id);
     }
 
-    @GetMapping( path = "/query")
-    public ArrayList<LineaDonacionModel> obtenerLineaDonacionPorId_articulo(@RequestParam("id_articulo") String id_articulo) {
-        return this.lineaDonacionService.obtenerLineaDonacionPorId_articulo(id_articulo);
-    }
+    // @GetMapping( path = "/query")
+    // public ArrayList<LineaDonacionModel> obtenerLineaDonacionPorId_articulo(@RequestParam("id_articulo") String id_articulo) {
+    //     return this.lineaDonacionService.obtenerLineaDonacionPorId_articulo(id_articulo);
+    // }
 
     @DeleteMapping( path = "/{id}")
     public String eliminarPorId(@PathVariable("id") Long id) {
