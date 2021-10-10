@@ -36,11 +36,11 @@ public class LineaDonacionModel {
     }
 
 
-    public void getConsecutivo(Long id){
+    public void getId(Long id){
         this.id = id;
     }
 
-    public Long setConsecutivo(){
+    public Long setId(){
         return id;
     }
 

@@ -46,9 +46,9 @@ public class LineaDonacionController {
     public String eliminarPorId(@PathVariable("id") Long id) {
         boolean ok = this.lineaDonacionService.eliminarLineaDonacion(id);
         if (ok){
-            return "Se eliminó la donación con folio " + id;
+            return "Se eliminó la linea donación con id " + id;
         }else{
-            return "No se pudo eliminar la donación con folio " + id;
+            return "No se pudo eliminar la linea donación con id " + id;
         }
     }
     

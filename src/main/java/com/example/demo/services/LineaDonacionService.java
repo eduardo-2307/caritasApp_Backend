@@ -19,8 +19,8 @@ public class LineaDonacionService {
         return (ArrayList<LineaDonacionModel>) lineadonacionRepository.findAll();
     }
 
-    public LineaDonacionModel guardarLineaDonacion(LineaDonacionModel donacion) {
-        return lineadonacionRepository.save(donacion);
+    public LineaDonacionModel guardarLineaDonacion(LineaDonacionModel lineadonacion) {
+        return lineadonacionRepository.save(lineadonacion);
     }
 
     public Optional<LineaDonacionModel> obtenerPorId(Long id) {
