@@ -13,27 +13,27 @@ import org.springframework.stereotype.Service;
 public class LineaDonacionService {
 
     @Autowired
-    LineaDonacionRepository donacionRepository;
+    LineaDonacionRepository lineadonacionRepository;
     
     public ArrayList<LineaDonacionModel> obtenerLineaDonacion() {
-        return (ArrayList<LineaDonacionModel>) donacionRepository.findAll();
+        return (ArrayList<LineaDonacionModel>) lineadonacionRepository.findAll();
     }
 
     public LineaDonacionModel guardarLineaDonacion(LineaDonacionModel donacion) {
-        return donacionRepository.save(donacion);
+        return lineadonacionRepository.save(donacion);
     }
 
     public Optional<LineaDonacionModel> obtenerPorId(Long id) {
-        return donacionRepository.findById(id);
+        return lineadonacionRepository.findById(id);
     }
 
-    public ArrayList<LineaDonacionModel> obtenerDonacionPorStatus(String id_articulo) {
-        return donacionRepository.findById_articulo(id_articulo);
+    public ArrayList<LineaDonacionModel> obtenerLineaDonacionPorId_articulo(String id_articulo) {
+        return lineadonacionRepository.findById_articulo(id_articulo);
     }
 
     public boolean eliminarLineaDonacion(Long id) {
         try{
-            donacionRepository.deleteById(id);
+            lineadonacionRepository.deleteById(id);
             return true;
         }catch(Exception err){
             return false;

@@ -28,7 +28,7 @@ public class LineaDonacionController {
     }
 
     @PostMapping()
-    public LineaDonacionModel guardarDonacion(@RequestBody LineaDonacionModel lineaDonacion) {
+    public LineaDonacionModel guardarLineaDonacion(@RequestBody LineaDonacionModel lineaDonacion) {
         return this.lineaDonacionService.guardarLineaDonacion(lineaDonacion);
     }
 
@@ -38,8 +38,8 @@ public class LineaDonacionController {
     }
 
     @GetMapping( path = "/query")
-    public ArrayList<LineaDonacionModel> obtenerDonacionPorStatus(@RequestParam("status") String status) {
-        return this.lineaDonacionService.obtenerDonacionPorStatus(status);
+    public ArrayList<LineaDonacionModel> obtenerLineaDonacionPorId_articulo(@RequestParam("id_arcticulo") String status) {
+        return this.lineaDonacionService.obtenerLineaDonacionPorId_articulo(status);
     }
 
     @DeleteMapping( path = "/{id}")

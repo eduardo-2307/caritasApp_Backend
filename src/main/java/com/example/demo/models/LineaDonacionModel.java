@@ -20,6 +20,21 @@ public class LineaDonacionModel {
     private float costo_unitario;
     private float costo_neto;
 
+    public LineaDonacionModel() {
+
+    }
+
+    public LineaDonacionModel(Long id, String folio_donacion, String id_articulo, float cantidad, float costo_unitario, float costo_neto) {
+       
+        this.id = id;
+        this.folio_donacion = folio_donacion;
+        this.id_articulo = id_articulo;
+        this.cantidad = cantidad;
+        this.costo_unitario = costo_unitario;
+        this.costo_neto = costo_neto;
+
+    }
+
 
     public void getConsecutivo(Long id){
         this.id = id;
