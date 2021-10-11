@@ -4,7 +4,7 @@ package com.example.demo.models;
 import javax.persistence.*;
 
 
-
+ 
 @Entity
 @Table(name = "Linea_Donacion")
 public class LineaDonacionModel {

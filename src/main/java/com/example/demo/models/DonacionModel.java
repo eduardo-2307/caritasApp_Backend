@@ -1,7 +1,11 @@
 package com.example.demo.models;
 
 
+import java.util.Calendar;
+
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 
 
@@ -14,7 +18,8 @@ public class DonacionModel {
     @Column(unique = true, nullable = false)
 
     private Long id;
-    private String fecha;
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT-6")
+    private Calendar fecha;
     private String id_donador;
     private String status;
     private String recolector;
@@ -23,7 +28,7 @@ public class DonacionModel {
 
     }
 
-    public DonacionModel(Long id, String fecha, String id_donador, String status, String recolector) {
+    public DonacionModel(Long id, Calendar fecha, String id_donador, String status, String recolector) {
        
         this.id = id;
         this.fecha = fecha;
@@ -33,19 +38,19 @@ public class DonacionModel {
     }
 
 
-    public void getFolio_Donacion(Long id){
+    public void setFolio_Donacion(Long id){
         this.id = id;
     }
 
-    public Long setFolio_Donacion(){
+    public Long getFolio_Donacion(){
         return id;
     }
 
-    public void getFecha(String fecha){
+    public void setFecha(Calendar fecha){
         this.fecha = fecha;
     }
 
-    public String setFecha(){
+    public Calendar getFecha(){
         return fecha;
     }
 
