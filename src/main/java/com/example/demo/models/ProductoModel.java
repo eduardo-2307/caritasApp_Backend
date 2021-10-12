@@ -14,7 +14,7 @@ public class ProductoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
-    
+    //
     private Long id;
     private String UPC;
     private String UOM;
