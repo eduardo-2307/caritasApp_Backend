@@ -16,9 +16,11 @@ public class LineaDonacionModel {
     private Long id;
     private String folio_donacion;
     private String id_articulo;
+    private String descripcion;
     private String cantidad;
     private String costo_unitario;
     private String costo_neto;
+    
 
     public LineaDonacionModel() {
 
@@ -58,6 +60,14 @@ public class LineaDonacionModel {
 
     public void setId_Articulo(String id_articulo) {
         this.id_articulo = id_articulo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getCantidad() {
