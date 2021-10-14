@@ -10,6 +10,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AlmacenRepository extends CrudRepository <AlmacenModel, Long> {
 
-    public abstract ArrayList<AlmacenModel> findByStatus(String status);
+    //public abstract ArrayList<AlmacenModel> findByStatus(String status);
     
 } 
