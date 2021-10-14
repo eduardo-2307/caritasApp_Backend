@@ -1,0 +1,42 @@
+package com.example.demo.services;
+
+import java.util.ArrayList;
+import java.util.Optional;
+
+import com.example.demo.models.AlmacenModel;
+import com.example.demo.repositories.AlmacenRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class AlmacenService {
+    
+    @Autowired
+    AlmacenRepository almacenRepository;
+    
+    public ArrayList<AlmacenModel> obtenerAlmacen() {
+        return (ArrayList<AlmacenModel>) almacenRepository.findAll();
+    }
+
+    public AlmacenModel guardarAlmacen(AlmacenModel donacion) {
+        return almacenRepository.save(donacion);
+    }
+
+    public Optional<AlmacenModel> obtenerPorId(Long id) {
+        return almacenRepository.findById(id);
+    }
+
+    // public ArrayList<AlmacenModel> obtenerDonacionPorStatus(String status) {
+    //     return donacionRepository.findByStatus(status);
+    // }
+
+    public boolean eliminarAlmacen(Long id) {
+        try{
+            almacenRepository.deleteById(id);
+            return true;
+        }catch(Exception err){
+            return false;
+        }
+    }
+}
