@@ -27,9 +27,9 @@ public class RecepcionService {
         return recepcionRepository.findById(id);
     }
 
-    public ArrayList<RecepcionModel> obtenerPorFolio_donacion(String folio_donacion) {
-        return recepcionRepository.findByFolio_donacion(folio_donacion);
-    }
+    // public ArrayList<RecepcionModel> obtenerPorFolio_donacion(String folio_donacion) {
+    //     return recepcionRepository.findByFolio_donacion(folio_donacion);
+    // }
 
     public boolean eliminarProducto(Long id) {
         try{
