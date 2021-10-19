@@ -1,11 +1,15 @@
 package com.example.demo.models;
 
+import java.util.Calendar;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "recepcion")
@@ -16,7 +20,8 @@ public class RecepcionModel {
     //
     private Long id;
     private String folio_donacion;
-    private String fecha_llegada;
+    @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT-6")
+    private Calendar fecha_llegada;
     private String peso;
     private String almacen_destino;
     private String colaborador_recolector;
@@ -27,7 +32,7 @@ public class RecepcionModel {
 
     }
 
-    public RecepcionModel(Long id, String folio_donacion, String fecha_llegada, String peso, String almacen_destino, String colaborador_recolector, String colaborador_recepcionista) {
+    public RecepcionModel(Long id, String folio_donacion, Calendar fecha_llegada, String peso, String almacen_destino, String colaborador_recolector, String colaborador_recepcionista) {
        
         this.id = id;
         this.folio_donacion = folio_donacion;
@@ -56,11 +61,11 @@ public class RecepcionModel {
         this.folio_donacion = folio_donacion;
     }
 
-    public String getFecha_llegada() {
+    public Calendar getFecha_llegada() {
         return fecha_llegada;
     }
 
-    public void setFecha_llegada(String fecha_llegada) {
+    public void setFecha_llegada(Calendar fecha_llegada) {
         this.fecha_llegada = fecha_llegada;
     }
     
