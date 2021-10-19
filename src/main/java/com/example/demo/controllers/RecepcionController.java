@@ -38,10 +38,10 @@ public class RecepcionController {
         return this.recepcionService.obtenerRecepcionPorId(id);
     }
 
-    @GetMapping( path = "query")
-    public ArrayList<RecepcionModel> obtenerRecepcionPorFolio_donacion(@RequestParam("folio_donacion") String folio_donacion) {
-        return this.recepcionService.obtenerPorFolio_donacion(folio_donacion);
-    }
+    // @GetMapping( path = "query")
+    // public ArrayList<RecepcionModel> obtenerRecepcionPorFolio_donacion(@RequestParam("folio_donacion") String folio_donacion) {
+    //     return this.recepcionService.obtenerPorFolio_donacion(folio_donacion);
+    // }
 
     @DeleteMapping( path = "{id}")
     public String eliminarPorId(@PathVariable("id") Long id) {
