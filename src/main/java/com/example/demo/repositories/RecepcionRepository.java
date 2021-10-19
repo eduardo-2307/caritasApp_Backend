@@ -1,6 +1,6 @@
 package com.example.demo.repositories;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 import com.example.demo.models.RecepcionModel;
 
@@ -11,6 +11,6 @@ import org.springframework.stereotype.Repository;
 
 public interface RecepcionRepository extends CrudRepository <RecepcionModel, Long> {  
     
-    public abstract ArrayList<RecepcionModel> findByFolio_donacion(String folio_donacion);
+    //public abstract ArrayList<RecepcionModel> findByFolio_donacion(String folio_donacion);
     
 }
