@@ -67,11 +67,11 @@ public class ProductoModel {
         this.descripcion = descripcion;
     }
 
-    public void getimg(int img){
+    public void setimg(int img){
         this.img = img;
     }
 
-    public int setimg(){
+    public int getimg(){
         return img;
     }
 

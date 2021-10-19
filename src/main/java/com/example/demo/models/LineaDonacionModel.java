@@ -6,7 +6,7 @@ import javax.persistence.*;
 
  
 @Entity
-@Table(name = "Linea_Donacion")
+@Table(name = "Linea_Donacion") 
 public class LineaDonacionModel {
 
     @Id
@@ -38,19 +38,19 @@ public class LineaDonacionModel {
     }
 
 
-    public void getId(Long id){
+    public void setId(Long id){
         this.id = id;
     }
 
-    public Long setId(){
+    public Long getId(){
         return id;
     }
 
-    public void getFolio_Donacion(String folio_donacion){
+    public void setFolio_Donacion(String folio_donacion){
         this.folio_donacion = folio_donacion;
     }
 
-    public String setFolio_Donacion(){
+    public String getFolio_Donacion(){
         return folio_donacion;
     }
 
