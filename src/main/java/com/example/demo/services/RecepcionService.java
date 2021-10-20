@@ -19,8 +19,8 @@ public class RecepcionService {
         return (ArrayList<RecepcionModel>) recepcionRepository.findAll();
     }
 
-    public RecepcionModel guardarRecepcion(RecepcionModel producto) {
-        return recepcionRepository.save(producto);
+    public RecepcionModel guardarRecepcion(RecepcionModel recepcion) {
+        return recepcionRepository.save(recepcion);
     }
 
     public Optional<RecepcionModel> obtenerPorId(Long id) {
@@ -31,7 +31,7 @@ public class RecepcionService {
     //     return recepcionRepository.findByFolio_donacion(folio_donacion);
     // }
 
-    public boolean eliminarProducto(Long id) {
+    public boolean eliminarRecepcion(Long id) {
         try{
             recepcionRepository.deleteById(id);
             return true;

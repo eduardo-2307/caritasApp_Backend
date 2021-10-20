@@ -45,7 +45,7 @@ public class RecepcionController {
 
     @DeleteMapping( path = "{id}")
     public String eliminarPorId(@PathVariable("id") Long id) {
-        boolean ok = this.recepcionService.eliminarProducto(id);
+        boolean ok = this.recepcionService.eliminarRecepcion(id);
         if (ok){
             return "Se eliminó el recepcion con id " + id;
         }else{
