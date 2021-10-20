@@ -17,7 +17,6 @@ public class RecepcionModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
-    //
     private Long id;
     private String folio_donacion;
     @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT-6")

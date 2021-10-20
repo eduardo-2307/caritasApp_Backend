@@ -8,11 +8,9 @@ import javax.persistence.*;
 @Entity
 @Table(name = "Linea_Donacion") 
 public class LineaDonacionModel {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
-
     private Long id;
     private String folio_donacion;
     private String id_articulo;

@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/recepcion")
 public class RecepcionController {
-
     @Autowired
     RecepcionService recepcionService;
 
@@ -34,7 +33,7 @@ public class RecepcionController {
     }
 
     @GetMapping( path = "/{id}") 
-    public Optional<RecepcionModel> obtenerRecepcionPorId(@PathVariable("id") Long id) {
+    public Optional<RecepcionModel> obtenerPorId(@PathVariable("id") Long id) {
         return this.recepcionService.obtenerPorId(id);
     }
 
@@ -43,7 +42,7 @@ public class RecepcionController {
     //     return this.recepcionService.obtenerPorFolio_donacion(folio_donacion);
     // }
 
-    @DeleteMapping( path = "{id}")
+    @DeleteMapping( path = "/{id}")
     public String eliminarPorId(@PathVariable("id") Long id) {
         boolean ok = this.recepcionService.eliminarRecepcion(id);
         if (ok){
