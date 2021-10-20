@@ -33,6 +33,7 @@ public class DonacionModel {
         this.id = id;
         this.fecha = fecha;
         this.id_donador = id_donador;
+        this.status = status;
         this.recolector = recolector;
 
     }
