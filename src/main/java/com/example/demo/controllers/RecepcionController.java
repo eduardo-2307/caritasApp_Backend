@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("recepcion")
+@RequestMapping("/recepcion")
 public class RecepcionController {
 
     @Autowired
@@ -33,7 +33,7 @@ public class RecepcionController {
         return this.recepcionService.guardarRecepcion(recepcion);
     }
 
-    @GetMapping( path = "{id}") 
+    @GetMapping( path = "/{id}") 
     public Optional<RecepcionModel> obtenerRecepcionPorId(@PathVariable("id") Long id) {
         return this.recepcionService.obtenerRecepcionPorId(id);
     }

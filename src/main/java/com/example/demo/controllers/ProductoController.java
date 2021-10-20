@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("producto")
+@RequestMapping("/producto")
 public class ProductoController {
     @Autowired
     ProductoService productoService;
@@ -32,7 +32,7 @@ public class ProductoController {
         return this.productoService.guardarProducto(producto);
     }
 
-    @GetMapping( path = "{id}")
+    @GetMapping( path = "/{id}")
     public Optional<ProductoModel> obtenerProductoPorId(@PathVariable("id") Long id) {
         return this.productoService.obtenerPorId(id);
     }
