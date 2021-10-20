@@ -23,7 +23,7 @@ public class RecepcionService {
         return recepcionRepository.save(producto);
     }
 
-    public Optional<RecepcionModel> obtenerRecepcionPorId(Long id) {
+    public Optional<RecepcionModel> obtenerPorId(Long id) {
         return recepcionRepository.findById(id);
     }
 

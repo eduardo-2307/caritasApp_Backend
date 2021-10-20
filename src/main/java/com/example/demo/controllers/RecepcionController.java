@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+//import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -35,7 +35,7 @@ public class RecepcionController {
 
     @GetMapping( path = "/{id}") 
     public Optional<RecepcionModel> obtenerRecepcionPorId(@PathVariable("id") Long id) {
-        return this.recepcionService.obtenerRecepcionPorId(id);
+        return this.recepcionService.obtenerPorId(id);
     }
 
     // @GetMapping( path = "query")
