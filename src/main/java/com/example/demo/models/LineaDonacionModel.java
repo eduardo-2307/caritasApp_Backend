@@ -4,10 +4,11 @@ package com.example.demo.models;
 import javax.persistence.*;
 
 
- 
+//Creacion de la tabla de la base de datos
 @Entity
 @Table(name = "Linea_Donacion") 
 public class LineaDonacionModel {
+    //Declaracion de los atributos de la tabla Linea_Donacion
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
@@ -20,6 +21,7 @@ public class LineaDonacionModel {
     private String costo_neto;
     
 
+    //Constructores
     public LineaDonacionModel() {
 
     }
@@ -36,6 +38,7 @@ public class LineaDonacionModel {
     }
 
 
+    //Setters y getters
     public void setId(Long id){
         this.id = id;
     }

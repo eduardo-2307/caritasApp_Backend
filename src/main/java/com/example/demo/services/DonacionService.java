@@ -9,9 +9,10 @@ import com.example.demo.repositories.DonacionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+//Declaracion del Service de donacion
 @Service
 public class DonacionService {
-    
+    //Declaracion de las funciones obtener, guardar y eliminar donacion
     @Autowired
     DonacionRepository donacionRepository;
     

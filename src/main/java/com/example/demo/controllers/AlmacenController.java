@@ -1,3 +1,4 @@
+//Almacen controller
 package com.example.demo.controllers;
 
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-//
+
 @RestController
 @RequestMapping("/almacen")
 public class AlmacenController {
@@ -22,26 +23,26 @@ public class AlmacenController {
     @Autowired
     AlmacenService almacenService;
 
+    //Metodo de busqueda de almacen en base de datos
     @GetMapping()
     public ArrayList<AlmacenModel> obtenerAlmacen(){
         return almacenService.obtenerAlmacen();
     }
 
+    //Metodo de guardado de almacen en base de datos
     @PostMapping()
     public AlmacenModel guardarAlmacen(@RequestBody AlmacenModel donacion) {
         return this.almacenService.guardarAlmacen(donacion);
     }
 
+    //Buscar almacen por su id en base de datos
     @GetMapping( path = "/{id}")
     public Optional<AlmacenModel> obtenerPorId(@PathVariable("id") Long id) {
         return this.almacenService.obtenerPorId(id);
     }
 
-    // @GetMapping( path = "/query")
-    // public ArrayList<AlmacenModel> obtenerDonacionPorStatus(@RequestParam("status") String status) {
-    //     return this.almacenService.obtenerDonacionPorStatus(status);
-    // }
 
+    //Eliminar un almacen de base de datos indicando su id 
     @DeleteMapping( path = "/{id}")
     public String eliminarPorId(@PathVariable("id") Long id) {
         boolean ok = this.almacenService.eliminarAlmacen(id);

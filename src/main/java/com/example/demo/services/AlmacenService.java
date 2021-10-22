@@ -9,9 +9,10 @@ import com.example.demo.repositories.AlmacenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+//Declaracion del Service de almacen
 @Service
 public class AlmacenService {
-    
+    //Declaracion de las funciones obtener, guardar y eliminar almacen
     @Autowired
     AlmacenRepository almacenRepository;
     
@@ -26,10 +27,6 @@ public class AlmacenService {
     public Optional<AlmacenModel> obtenerPorId(Long id) {
         return almacenRepository.findById(id);
     }
-
-    // public ArrayList<AlmacenModel> obtenerDonacionPorStatus(String status) {
-    //     return donacionRepository.findByStatus(status);
-    // }
 
     public boolean eliminarAlmacen(Long id) {
         try{

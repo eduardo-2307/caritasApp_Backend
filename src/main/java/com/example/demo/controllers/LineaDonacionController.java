@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -22,26 +21,25 @@ public class LineaDonacionController {
     @Autowired
     LineaDonacionService lineaDonacionService;
 
+    //Metodo de busqueda de linea donacion en base de datos
     @GetMapping()
     public ArrayList<LineaDonacionModel> obtenerLineaDonacion(){
         return lineaDonacionService.obtenerLineaDonacion();
     }
 
+    //Metodo de guardado de linea donacion en base de datos
     @PostMapping()
     public LineaDonacionModel guardarLineaDonacion(@RequestBody LineaDonacionModel lineaDonacion) {
         return this.lineaDonacionService.guardarLineaDonacion(lineaDonacion);
     }
 
+    //Buscar linea donacion por su folio donacion en base de datos
     @GetMapping( path = "/{id}")
     public Optional<LineaDonacionModel> obtenerPorId(@PathVariable("id") Long id) {
         return this.lineaDonacionService.obtenerPorId(id);
     }
 
-    // @GetMapping( path = "/query")
-    // public ArrayList<LineaDonacionModel> obtenerLineaDonacionPorId_articulo(@RequestParam("id_articulo") String id_articulo) {
-    //     return this.lineaDonacionService.obtenerLineaDonacionPorId_articulo(id_articulo);
-    // }
-
+    //Eliminar una donacion de base de datos indicando su id 
     @DeleteMapping( path = "/{id}")
     public String eliminarPorId(@PathVariable("id") Long id) {
         boolean ok = this.lineaDonacionService.eliminarLineaDonacion(id);

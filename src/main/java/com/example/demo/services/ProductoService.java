@@ -9,8 +9,10 @@ import com.example.demo.repositories.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+//Declaracion del Service de producto
 @Service 
 public class ProductoService {
+    //Declaracion de las funciones obtener, guardar y eliminar producto
     @Autowired
     ProductoRepository productoRepository;
     

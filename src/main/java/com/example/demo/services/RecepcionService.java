@@ -9,9 +9,11 @@ import com.example.demo.repositories.RecepcionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+//Declaracion del Service de recepcion
 @Service 
 public class RecepcionService {
 
+    //Declaracion de las funciones obtener, guardar y eliminar recepcion
     @Autowired
     RecepcionRepository recepcionRepository;
     
@@ -27,10 +29,6 @@ public class RecepcionService {
         return recepcionRepository.findById(id);
     }
 
-    // public ArrayList<RecepcionModel> obtenerPorFolio_donacion(String folio_donacion) {
-    //     return recepcionRepository.findByFolio_donacion(folio_donacion);
-    // }
-
     public boolean eliminarRecepcion(Long id) {
         try{
             recepcionRepository.deleteById(id);
@@ -39,9 +37,5 @@ public class RecepcionService {
             return false;
         }
     }
-    //
-    //
-    //
-    //
-    //
+    
 }

@@ -5,10 +5,11 @@ import com.example.demo.models.LineaDonacionModel;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+//Declaracion del repositorio
 @Repository
 public interface LineaDonacionRepository extends CrudRepository <LineaDonacionModel, Long> {
 
-    //public abstract ArrayList<LineaDonacionModel> findById_articulo(String id_articulo);
+    //Aqui se declararian metodos adicionales en caso de ser necesario
     
 }
 

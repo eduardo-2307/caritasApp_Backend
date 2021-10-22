@@ -8,11 +8,11 @@ import javax.persistence.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 
-
+//Creacion de la tabla de la base de datos
 @Entity
 @Table(name = "Donacion")
 public class DonacionModel {
- 
+    //Declaracion de los atributos de la tabla Donacion
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
@@ -24,6 +24,7 @@ public class DonacionModel {
     private String status;
     private String recolector;
 
+    //Constructores
     public DonacionModel() {
 
     }
@@ -39,6 +40,7 @@ public class DonacionModel {
     }
 
 
+    //Setters y getters
     public void setFolio_Donacion(Long id){
         this.id = id;
     }

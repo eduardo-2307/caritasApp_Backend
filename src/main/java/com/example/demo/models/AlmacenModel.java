@@ -7,10 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//Creacion de la tabla de la base de datos
 @Entity
 @Table(name = "Almacen")
 public class AlmacenModel {
-
+    //Declaracion de los atributos de la tabla Almacen
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
@@ -23,6 +24,7 @@ public class AlmacenModel {
     private String cp;
     private String colonia;
 
+    //Constructores
     public AlmacenModel() {
 
     }
@@ -40,6 +42,7 @@ public class AlmacenModel {
     }
 
 
+    //Setters y getters
     public void setId(Long id){
         this.id = id;
     }

@@ -22,26 +22,31 @@ public class ProductoController {
     @Autowired
     ProductoService productoService;
 
+    //Metodo de busqueda de productos en base de datos
     @GetMapping()
     public ArrayList<ProductoModel> obtenerProductos(){
         return productoService.obtenerProductos();
     }
 
+    //Metodo de guardado de pruductos en base de datos
     @PostMapping()
     public ProductoModel guardarProducto(@RequestBody ProductoModel producto) {
         return this.productoService.guardarProducto(producto);
     }
 
+    //Buscar productos por su id en base de datos
     @GetMapping( path = "/{id}")
     public Optional<ProductoModel> obtenerProductoPorId(@PathVariable("id") Long id) {
         return this.productoService.obtenerPorId(id);
     }
 
+    //Buscar productos por su UPC en base de datos
     @GetMapping( path = "query")
     public ArrayList<ProductoModel> obtenerProductoPorUPC(@RequestParam("UPC") String UPC) {
         return this.productoService.obtenerPorUPC(UPC);
     }
 
+    //Eliminar un producto de base de datos indicando su id
     @DeleteMapping( path = "{id}")
     public String eliminarPorId(@PathVariable("id") Long id) {
         boolean ok = this.productoService.eliminarProducto(id);

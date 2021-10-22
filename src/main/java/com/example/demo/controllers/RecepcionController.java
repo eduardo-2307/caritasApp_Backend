@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-//import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -22,26 +21,25 @@ public class RecepcionController {
     @Autowired
     RecepcionService recepcionService;
 
+    //Metodo de busqueda de recepcion en base de datos
     @GetMapping()
     public ArrayList<RecepcionModel> obtenerRecepcion(){
         return recepcionService.obtenerRecepcion();
     }
 
+    //Metodo de guardado de recepcion en base de datos
     @PostMapping()
     public RecepcionModel guardarRecepcion(@RequestBody RecepcionModel recepcion) {
         return this.recepcionService.guardarRecepcion(recepcion);
     }
 
+    //Buscar recepcion por su id en base de datos
     @GetMapping( path = "/{id}") 
     public Optional<RecepcionModel> obtenerPorId(@PathVariable("id") Long id) {
         return this.recepcionService.obtenerPorId(id);
     }
 
-    // @GetMapping( path = "query")
-    // public ArrayList<RecepcionModel> obtenerRecepcionPorFolio_donacion(@RequestParam("folio_donacion") String folio_donacion) {
-    //     return this.recepcionService.obtenerPorFolio_donacion(folio_donacion);
-    // }
-
+    //Eliminar una recepcion de base de datos indicando su id
     @DeleteMapping( path = "/{id}")
     public String eliminarPorId(@PathVariable("id") Long id) {
         boolean ok = this.recepcionService.eliminarRecepcion(id);

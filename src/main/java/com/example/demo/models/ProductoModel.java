@@ -7,10 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//Creacion de la tabla de la base de datos
 @Entity
 @Table(name = "producto")
 public class ProductoModel {
-
+    //Declaracion de los atributos de la tabla producto
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
@@ -21,6 +22,7 @@ public class ProductoModel {
     private String descripcion;
     private int img;
 
+    //Constructores
     public ProductoModel() {
 
     }
@@ -35,6 +37,7 @@ public class ProductoModel {
 
     }
 
+    //Setters y getters
     public Long getId() {
         return id;
     }

@@ -11,9 +11,11 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+//Creacion de la tabla de la base de datos
 @Entity
 @Table(name = "recepcion")
 public class RecepcionModel {
+    //Declaracion de los atributos de la tabla recepcion
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
@@ -26,7 +28,7 @@ public class RecepcionModel {
     private String colaborador_recolector;
     private String colaborador_recepcionista;
 
-
+    //Constructores
     public RecepcionModel() {
 
     }
@@ -43,7 +45,7 @@ public class RecepcionModel {
 
     }
 
-
+    //Setters y getters
     public Long getId() {
         return id;
     }
