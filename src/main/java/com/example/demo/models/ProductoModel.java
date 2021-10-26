@@ -27,7 +27,7 @@ public class ProductoModel {
 
     }
 
-    public ProductoModel(Long id, int linea, String UPC, String UOM, String descripcion, int img) {
+    public ProductoModel(Long id, String UPC, String UOM, String descripcion, int img) {
        
         this.id = id;
         this.UPC = UPC;
